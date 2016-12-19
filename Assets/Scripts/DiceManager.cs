@@ -6,9 +6,13 @@ using System.Collections.Generic;
 //Handles when dice are rolling and calls requirementhandler when dice are finished rolling
 
 [RequireComponent(typeof(RequirementHandler))]
+[RequireComponent(typeof(AudioSource))]
 public class DiceManager : MonoBehaviour {
+
+    public List<AudioClip> DieStopSounds = new List<AudioClip>();
    
     private RequirementHandler RequirementHandler;
+    private AudioSource audioSource;
 
     //check last 3 frames if value of any die has changed
     private List<Die> DiceList = new List<Die>();
@@ -22,6 +26,7 @@ public class DiceManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         RequirementHandler = GetComponent<RequirementHandler>();
+        audioSource = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -52,13 +57,7 @@ public class DiceManager : MonoBehaviour {
 
                         if (lastSums.Valid())
                         {
-                            gameState = GameState.STOPPED;
-                            List<int> diceValues = new List<int>();
-                            foreach (Die d in DiceList)
-                            {
-                                diceValues.Add(d.value);
-                            }
-                            RequirementHandler.CheckRequirements(diceValues);
+                            OnDiceStop();
                         }
                         
                     }
@@ -80,5 +79,19 @@ public class DiceManager : MonoBehaviour {
     public void Reset()
     {
         DiceList.Clear();
+    }
+
+    private void OnDiceStop()
+    {
+        audioSource.clip = DieStopSounds[Random.Range(0, DieStopSounds.Count)];
+        audioSource.Play();
+
+        gameState = GameState.STOPPED;
+        List<int> diceValues = new List<int>();
+        foreach (Die d in DiceList)
+        {
+            diceValues.Add(d.value);
+        }
+        RequirementHandler.CheckRequirements(diceValues);
     }
 }

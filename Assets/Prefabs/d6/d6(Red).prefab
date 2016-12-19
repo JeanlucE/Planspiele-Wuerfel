@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 54000013536854212}
   - component: {fileID: 65000012185769728}
   - component: {fileID: 114000010241273250}
+  - component: {fileID: 114836753556002646}
   m_Layer: 0
   m_Name: d6(Red)
   m_TagString: Untagged
@@ -121,3 +122,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+--- !u!114 &114836753556002646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010040440922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa40c5ce77a20174793f1384076ced31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieHitSounds:
+  - {fileID: 8300000, guid: 8611d33d320c1c840a725800b587d404, type: 3}
+  - {fileID: 8300000, guid: 12fab4c1d9d837d42b3c5eaf614f5c85, type: 3}
+  - {fileID: 8300000, guid: 5994e9d708f0b2c44873d62135587604, type: 3}
+  - {fileID: 8300000, guid: bd9824cbb1d65294d826d6b652480c2a, type: 3}
+  - {fileID: 8300000, guid: 49c05cd50e0d82e4aaea32d782631fd0, type: 3}
+  - {fileID: 8300000, guid: 1e06a5a57959564459cd907487fe790d, type: 3}
+  - {fileID: 8300000, guid: ba2236648f094be43a1c56a77c2b0068, type: 3}
+  - {fileID: 8300000, guid: c62b3f8670a395840b0adfae0ef5681e, type: 3}

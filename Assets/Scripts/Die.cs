@@ -15,11 +15,12 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */  
 using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Die base class to determine if a die is rolling and to calculate it's current value
 /// </summary>
+[RequireComponent(typeof(Collider))]
 public class Die : MonoBehaviour {
 
 	//------------------------------------------------------------------------------------------------------------------------------
@@ -27,13 +28,15 @@ public class Die : MonoBehaviour {
 	//------------------------------------------------------------------------------------------------------------------------------
 	
 	// current value, 0 is undetermined (die is rolling) or invalid.
-	public int value = 0;	
+	public int value = 0;
 
-	//------------------------------------------------------------------------------------------------------------------------------
-	// protected and private attributes
-	//------------------------------------------------------------------------------------------------------------------------------	
+    //------------------------------------------------------------------------------------------------------------------------------
+    // protected and private attributes
+    //------------------------------------------------------------------------------------------------------------------------------	
+
+
 	
-	// normalized (hit)vector from die center to upper side in local space is used to determine what side of a specific die is up/down = value
+    // normalized (hit)vector from die center to upper side in local space is used to determine what side of a specific die is up/down = value
     protected Vector3 localHitNormalized;
 	// hitVector check margin
     protected float validMargin = 0.45F;
@@ -105,6 +108,7 @@ public class Die : MonoBehaviour {
 			// if we got a Vector.zero as the testHitVector we have checked all sides of this die
         } while (testHitVector != Vector3.zero);
     }
+
 
     void Update()
     {

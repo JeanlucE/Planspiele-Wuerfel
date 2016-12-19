@@ -6,8 +6,10 @@ public class LeverActivatable : MonoBehaviour, Activatable {
     public GameObject leverObject;
     public SkullActivatable Skull;
 
+    private Vector3 startEulerAngles;
     public void Start()
     {
+        startEulerAngles = leverObject.transform.eulerAngles;
         //light.enabled = Active;
         RotateLever();
     }
@@ -22,12 +24,12 @@ public class LeverActivatable : MonoBehaviour, Activatable {
     {
         if (!Active)
         {
-            leverObject.transform.eulerAngles = new Vector3(-70, 0, 0);
+            leverObject.transform.eulerAngles = new Vector3(-70, startEulerAngles.y, startEulerAngles.z);
             Skull.SetActive(Active);
         }
         else
         {
-            leverObject.transform.eulerAngles = new Vector3(-100, 0, 0);
+            leverObject.transform.eulerAngles = new Vector3(-100, startEulerAngles.y, startEulerAngles.z);
             Skull.SetActive(Active);
         }
 
