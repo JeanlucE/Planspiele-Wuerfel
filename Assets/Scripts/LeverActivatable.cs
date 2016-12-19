@@ -11,7 +11,16 @@ public class LeverActivatable : MonoBehaviour, Activatable {
     {
         startEulerAngles = leverObject.transform.eulerAngles;
         //light.enabled = Active;
-        RotateLever();
+        if (!Active)
+        {
+            leverObject.transform.eulerAngles = new Vector3(-70, startEulerAngles.y, startEulerAngles.z);
+            Skull.SetActive(Active);
+        }
+        else
+        {
+            leverObject.transform.eulerAngles = new Vector3(-100, startEulerAngles.y, startEulerAngles.z);
+            Skull.SetActive(Active);
+        }
     }
 
 	public void Activate()
@@ -26,11 +35,13 @@ public class LeverActivatable : MonoBehaviour, Activatable {
         {
             leverObject.transform.eulerAngles = new Vector3(-70, startEulerAngles.y, startEulerAngles.z);
             Skull.SetActive(Active);
+            GetComponent<AudioSource>().Play();
         }
         else
         {
             leverObject.transform.eulerAngles = new Vector3(-100, startEulerAngles.y, startEulerAngles.z);
             Skull.SetActive(Active);
+            GetComponent<AudioSource>().Play();
         }
 
     }

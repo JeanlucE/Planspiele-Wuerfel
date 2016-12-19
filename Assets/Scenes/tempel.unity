@@ -91,6 +91,63 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &191836510
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 194
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471045615246144, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688519745807360, guid: 832975d76fc3a604bb00ab98e53d88fa,
+        type: 2}
+      propertyPath: Charakter
+      value: 
+      objectReference: {fileID: 302174867}
+    - target: {fileID: 114688519745807360, guid: 832975d76fc3a604bb00ab98e53d88fa,
+        type: 2}
+      propertyPath: CharakterCamera
+      value: 
+      objectReference: {fileID: 561270381}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 832975d76fc3a604bb00ab98e53d88fa, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &302174867 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1371153750779624, guid: 0afdb655a0661ce449bc87b1f9b25262,
+    type: 2}
+  m_PrefabInternal: {fileID: 983498910}
 --- !u!1 &398896325
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +296,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &561270381 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1312142812275392, guid: 0afdb655a0661ce449bc87b1f9b25262,
+    type: 2}
+  m_PrefabInternal: {fileID: 983498910}
 --- !u!1001 &983498910
 Prefab:
   m_ObjectHideFlags: 0
@@ -335,6 +397,37 @@ Prefab:
       propertyPath: DieStopSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: e9df7944f40488548bd87dcd75773732, type: 3}
+    - target: {fileID: 114900308382792206, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: cfc016ba5ceca574d9e260e06bbfff18,
+        type: 3}
+    - target: {fileID: 82145157577497480, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cee1a146982445a4e8b9f5efae5951a1, type: 3}
+    - target: {fileID: 82360862590329596, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cee1a146982445a4e8b9f5efae5951a1, type: 3}
+    - target: {fileID: 82834150534356404, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cee1a146982445a4e8b9f5efae5951a1, type: 3}
+    - target: {fileID: 82068529287631368, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cee1a146982445a4e8b9f5efae5951a1, type: 3}
+    - target: {fileID: 114900308382792206, guid: 0afdb655a0661ce449bc87b1f9b25262,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0afdb655a0661ce449bc87b1f9b25262, type: 2}
   m_IsPrefabParent: 0
